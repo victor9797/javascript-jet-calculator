@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+ Copyright (c) 2014, 2021, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<html lang="en-us">
+  <head>
+    <title>Oracle JET Starter Template - Web Nav Bar</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1">
+    <link rel="icon" href="css/images/favicon.ico" type="image/x-icon" />
+
+    <!-- This is the main css file for the default theme -->
+    <!-- injector:theme -->
+    <link rel="stylesheet" href="css/libs/oj/v10.0.0/redwood/oj-redwood-min.css" type="text/css"/>
+    <!-- endinjector -->
+
+    <!-- This contains icon fonts used by the starter template -->
+    <link rel="stylesheet" href="css/demo-alta-site-min.css" type="text/css"/>
+    <link rel="stylesheet" id="uxiconFont" href="https://static.oracle.com/cdn/fnd/gallery/2101.3.0/images/iconfont/ojuxIconFont.min.css">
+
+    <!-- This is where you would add any app specific styling -->
+    <link rel="stylesheet" href="css/app.css" type="text/css"/>
+
+  </head>
+  <body class="oj-web-applayout-body">
+    <!-- Template for rendering navigation items -->
+    <script type="text/html" id="navTemplate">
+      <li><a href="#">
+        <span :class="[[$data.detail.iconClass]]"></span>
+        <oj-bind-text value="[[$data.detail.label]]"></oj-bind-text>
+      </a></li>
+    </script>
+
+    <div id="globalBody" class="oj-web-applayout-page">
+
+      <div id="announce" tabindex="-1" class="sendOffScreen" :aria-live="[[manner]]" aria-atomic="true">
+          <p id="ariaLiveMessage"><oj-bind-text value="[[message]]"></oj-bind-text></p>
+      </div>
+
+      <header role="banner" class="oj-web-applayout-header">
+        <div class="oj-web-applayout-max-width oj-flex-bar oj-sm-align-items-center">
+          <div class="oj-flex-bar-middle oj-sm-align-items-baseline">
+            <span role="img" class="oj-icon demo-oracle-icon" title="Oracle Logo" alt="Oracle Logo"></span>
+            <h1 class="oj-sm-only-hide oj-web-applayout-header-title" title="Application Name"><oj-bind-text value="[[appName]]"></oj-bind-text></h1>
+          </div>
+        </div>
+        <div role="navigation" class="oj-web-applayout-max-width oj-web-applayout-navbar">
+          <oj-navigation-list id="navList" data="[[navDataProvider]]"
+                              :class="[[{'oj-md-condense oj-md-justify-content-flex-end': !smScreen()}]]"
+                              display="[[smScreen() ? 'icons' : 'all']]"
+                              edge="top"
+                              item.renderer="[[KnockoutTemplateUtils.getRenderer('navTemplate', true)]]"
+                              selection="{{selection.path}}">
+          </oj-navigation-list>
+        </div>
+      </header>
+      <oj-module role="main" class="oj-web-applayout-max-width oj-web-applayout-content" config="[[moduleAdapter.koObservableConfig]]">
+      </oj-module>
+    </div>
+
+    <script type="text/javascript">
+      // The "oj_whenReady" global variable enables a strategy that the busy context whenReady,
+      // will implicitly add a busy state, until the application calls applicationBootstrapComplete
+      // on the busy state context.
+      window["oj_whenReady"] = true;
+    </script>
+    <script type="text/javascript" src="js/libs/require/require.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+  </body>
+</html>
