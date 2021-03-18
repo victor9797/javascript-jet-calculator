@@ -1,0 +1,17 @@
+/* This file is where css selectors for the component go.
+   There will be hard coded properties and properties controlled by variables, for example
+
+   calculator-component .calculator-component-value-text {
+   color: var(--calculator-component-value-text-color);
+   display: inline-block;
+	 }
+*/
+
+calculator-component:not(.oj-complete){
+  visibility: hidden;
+}
+
+calculator-component{
+	min-height: 50px;
+	width: 50px;
+}

@@ -1,0 +1,22 @@
+<div style="width: 75%; display: block; margin: 0 auto;">
+  <h6>Calculator</h6>
+
+  <oj-form-layout max-columns="2" direction="row" user-assistance-density='compact' class="oj-helper-margin-auto">
+
+    <oj-input-number required label-hint="First number" value="{{firstNumber}}"></oj-input-number>
+
+    <oj-input-number required label-hint="Second number" value="{{secondNumber}}"></oj-input-number>
+
+    <oj-select-single data="[[operationsSDP]]"
+      value="{{operation}}"
+      label-hint="Operation">
+    </oj-select-single>
+
+    <oj-button id="icon_button" on-click="[[onCalculate]]">Calculate</oj-button>
+  </oj-form-layout>
+
+  
+  <oj-form-layout max-columns="1" direction="row" user-assistance-density='compact' class="oj-helper-margin-auto">
+    <oj-input-number value="[[result]]"  label-hint="Result" id="result" readonly></oj-input-number>
+  </oj-form-layout>
+</div>

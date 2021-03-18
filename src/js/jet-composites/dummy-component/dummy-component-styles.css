@@ -1,0 +1,17 @@
+/* This file is where css selectors for the component go.
+   There will be hard coded properties and properties controlled by variables, for example
+
+   dummy-component .dummy-component-value-text {
+   color: var(--dummy-component-value-text-color);
+   display: inline-block;
+	 }
+*/
+
+dummy-component:not(.oj-complete){
+  visibility: hidden;
+}
+
+dummy-component{
+	min-height: 50px;
+	width: 50px;
+}
