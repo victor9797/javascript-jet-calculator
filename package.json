@@ -24,6 +24,7 @@
     "karma-requirejs": "^1.1.0",
     "karma-sinon": "^1.0.5",
     "karma-typescript": "^5.5.0",
+    "mocha": "^6.2.0",
     "sinon": "^10.0.0",
     "text": "github:requirejs/text",
     "ts-sinon": "^2.0.1",
@@ -33,6 +34,7 @@
     "node": ">=10.13.0"
   },
   "scripts": {
+    "test": "npx karma start test/karma.conf.js",
     "unit": "mocha ./tests/unit/**.js"
   },
   "private": true

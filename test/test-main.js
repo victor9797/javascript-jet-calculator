@@ -51,7 +51,7 @@
      "normalize":"libs/require-css/normalize",
  
      "sinon": "../../node_modules/sinon/pkg/sinon",
-     "demo-card": "jet-composites/demo-card/1.0.15"
+     "calculator-component": "jet-composites/calculator-component/1.0.0"
    },
  
    // dynamically load all test files
