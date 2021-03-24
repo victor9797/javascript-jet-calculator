@@ -1,0 +1,27 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "allowJs": true,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "target": "es2018",
+    "noEmitOnError": true,
+    "module": "amd",
+    "checkJs": false,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "ojs/*": ["./node_modules/@oracle/oraclejet/dist/types/*"],
+      "knockout": ["./node_modules/knockout"]
+    },
+    "lib": ["dom", "es2018", "scripthost"]
+  },
+  "include": [
+    "./node_modules/@oracle/oraclejet/dist/types/requirejs-plugins.d.ts",
+    "./src/ts/**/*.ts"
+  ]
+}
