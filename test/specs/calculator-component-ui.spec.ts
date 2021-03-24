@@ -1,5 +1,5 @@
 // Import the viewmodel definition
-import ViewModel from 'calculator-component/calculator-component-viewModel';
+import ViewModel from 'calculator-component/calculator-component-viewModel.js';
 
 // Import the loader so that the composite is registered with JET
 import 'calculator-component/loader';

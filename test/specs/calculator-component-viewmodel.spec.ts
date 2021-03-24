@@ -1,12 +1,12 @@
 // Import the viewmodel definition
-import ViewModel from "demo-card/demo-card-viewModel";
+import ViewModel from "calculator-component/calculator-component-viewModel";
 // Import the loader so that the composite is registered with JET
-import "demo-card/loader";
+import "calculator-component/loader";
 import * as sinon from "sinon";
 
 declare const expect: Chai.ExpectStatic;
 
-describe("demo-card CCA view model tests", () => {
+describe("calculator-component CCA view model tests", () => {
   const cardFlippedCss = 'demo-card-flipped';
   let card: HTMLElement;
   let flipContainer: HTMLElement;

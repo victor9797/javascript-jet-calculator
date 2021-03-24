@@ -1,5 +1,5 @@
 // Import the loader so that the composite is registered with JET
-import 'demo-card/loader';
+import 'calculator-component/loader';
 // Import the Context class from ojcontext
 import * as Context from 'ojs/ojcontext';
 // Knockout libraries
