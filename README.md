@@ -1,4 +1,4 @@
-# jet-calculator
+# Javascript based jet-calculator
 Custom JET calculator component
 
 To try out this project, please follow these steps:
